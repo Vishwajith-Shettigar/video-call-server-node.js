@@ -133,6 +133,7 @@ webSocket.on('request', (req) => {
         }
     });
 
+    // close
     connection.on('close', () => {
         users.forEach(user => {
             if (user.conn === connection) {
@@ -157,3 +158,4 @@ function updateUserAvailability(username, availability) {
         }
     }
 }
+module.exports=server
