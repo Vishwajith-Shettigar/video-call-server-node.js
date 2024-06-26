@@ -26,6 +26,7 @@ webSocket.on('request', (req) => {
         const data = JSON.parse(message.utf8Data);
         const user = findUser(data.name);
 
+        console.log(data.name+"log")
         switch (data.type) {
             case "STORE_USER":
                 if (user !== undefined) {
