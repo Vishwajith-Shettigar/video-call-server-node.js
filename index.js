@@ -21,7 +21,7 @@ const users = [];
 
 webSocket.on('request', (req) => {
     const connection = req.accept();
-
+    console.log("connection")
     connection.on('message', (message) => {
         const data = JSON.parse(message.utf8Data);
         const user = findUser(data.name);
